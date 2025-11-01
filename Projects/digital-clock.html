@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Digital Clock System</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .project-header {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 1)), url('https://picsum.photos/seed/clock-bg/1200/400');
+            background-size: cover;
+            background-position: center;
+        }
+        .project-header h1 { font-size: 3rem; }
+        .project-content { max-width: 900px; margin: 40px auto; }
+        .project-content img { width: 100%; border-radius: 5px; margin-bottom: 20px; border: 1px solid var(--border-color); }
+        .project-content h3 { color: var(--primary-color); font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        .project-links { text-align: center; margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-logo"><a href="../index.html" style="color: #fff;">ShreyasIO.dev</a></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects" class="active">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="mailto:shreyaskadlag2019@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <h1>Digital Clock System (PIC16F877A)</h1>
+        <p>A dual-mode clock system using internal timers and seven-segment displays.</p>
+    </header>
+
+    <div class="container project-content">
+        
+        <img src="https://picsum.photos/seed/ssd/900/400" alt="Digital Clock with seven-segment displays">
+
+        <h3>The Problem</h3>
+        <p>Creating an accurate timekeeping device from scratch requires precise handling of timers and interrupts. This project was designed to master core microcontroller concepts: timer management, interrupt handling, and multiplexing displays (like Seven-Segment Displays - SSDs).</p>
+
+        <h3>My Solution</h3>
+        <p>I designed a dual-mode clock system using the **PIC16F877A** and four **seven-segment displays (SSDs)**. The system can operate in two distinct modes: a static display mode for testing, and a dynamic mode for real-time clock functionality.</p>
+        
+        <h3>How It Works: The Technical Details</h3>
+        <p>The project's complexity lies in its dual functionality and precise timing.</p>
+        <ul>
+            <li><strong>Static Display Mode:</strong> In this mode, the system accepts user inputs to display preset time values on the SSDs. This is useful for testing the display connections and multiplexing logic.</li>
+            <li><strong>Dynamic (Real-Time) Mode:</strong> This is the functional clock mode. It uses the PIC's **internal timers and interrupts** to generate accurate one-second ticks. The logic updates the time variables (seconds, minutes, hours) and refreshes the four SSDs.</li>
+            <li><strong>User Input:</strong> Mode selection (static vs. dynamic) and setting the time are handled via user inputs (buttons).</li>
+        </ul>
+
+        <h3>Tech Stack Used</h3>
+        <ul>
+            <li><strong>Platform:</strong> PIC16F877A</li>
+            <li><strong>Display:</strong> 4 x Seven-Segment Displays (SSDs)</li>
+            <li><strong>Core Concepts:</strong> Internal Timers, Interrupts, Display Multiplexing</li>
+            <li><strong>Software:</strong> C (MPLAB)</li>
+        </ul>
+
+        <div class="project-links">
+            <a href="https://github.com/Skadlah/Image-Stegnography" class="cta-button" target="_blank">View on GitHub</a>
+            <a href="../index.html#projects" class="cta-button secondary">Back to Projects</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shreyas Kadlag. Built from scratch.</p>
+    </footer>
+</body>
+</html>
