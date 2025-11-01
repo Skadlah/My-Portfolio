@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Image Steganography</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .project-header {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 1)), url('https://picsum.photos/seed/stegano-bg/1200/400');
+            background-size: cover;
+            background-position: center;
+        }
+        .project-header h1 { font-size: 3rem; }
+        .project-content { max-width: 900px; margin: 40px auto; }
+        .project-content img { width: 100%; border-radius: 5px; margin-bottom: 20px; border: 1px solid var(--border-color); }
+        .project-content h3 { color: var(--primary-color); font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        .project-links { text-align: center; margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-logo"><a href="../index.html" style="color: #fff;">ShreyasIO.dev</a></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects" class="active">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="mailto:shreyaskadlag2019@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <h1>Image Steganography (LSB)</h1>
+        <p>A C program to securely hide data within image files using bitwise manipulation.</p>
+    </header>
+
+    <div class="container project-content">
+        
+        <img src="https" alt="Image Steganography LSB concept">
+
+        <h3>The Problem</h3>
+        <p>Sending sensitive data over a network is risky. Encryption makes data unreadable, but "steganography" hides the very existence of the data. The challenge is to embed data into a normal-looking file (like an image) without visibly altering it.</p>
+
+        <h3>My Solution</h3>
+        <p>I implemented an Image Steganography program in C using the <strong>LSB (Least Significant Bit)</strong> technique. This program can embed a secret text file inside a carrier image file and also extract it back, all while maintaining data integrity.</p>
+        
+        <h3>How It Works: The Technical Details</h3>
+        <p>The logic relies on low-level file operations and bitwise manipulation.</p>
+        <ul>
+            <li><strong>LSB Technique:</strong> Every byte in an image file has 8 bits. The LSB is the 8th bit (the "least significant"). Changing this bit causes such a tiny change in a pixel's color that it's invisible to the human eye. I used this bit to "hide" one bit of the secret data.</li>
+            <li><strong>File I/O:</strong> The program uses standard file I/O operations (like `fopen`, `fread`, `fwrite` in C) to read the carrier image and the secret data byte by byte.</li>
+            <li><strong>Bitwise Manipulation:</strong> I used <strong>bitwise operators</strong> (like `&`, `|`, `<<`, `>>`) to precisely embed the bits of the secret data into the LSBs of the image data.</li>
+            <li><strong>Modular Code:</strong> The process was modularized into functions (e.g., `embedData()`, `extractData()`) to enhance readability, security, and maintain data integrity.</li>
+        </ul>
+
+        <h3>Tech Stack Used</h3>
+        <ul>
+            <li><strong>Language:</strong> C</li>
+            <li><strong>Core Concepts:</strong> File I/O, Bitwise Manipulation, LSB Technique</li>
+            <li><strong>Development:</strong> Function-based modular coding</li>
+        </ul>
+
+        <div class="project-links">
+            <a href="https://github.com/Skadlah/Image-Stegnography" class="cta-button" target="_blank">View on GitHub</a>
+            <a href="../index.html#projects" class="cta-button secondary">Back to Projects</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shreyas Kadlag. Built from scratch.</p>
+    </footer>
+</body>
+</html>

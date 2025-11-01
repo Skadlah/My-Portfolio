@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Smart Environmental Chamber</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .project-header {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 1)), url('https://picsum.photos/seed/chamber-bg/1200/400');
+            background-size: cover;
+            background-position: center;
+        }
+        .project-header h1 { font-size: 3rem; }
+        .project-content { max-width: 900px; margin: 40px auto; }
+        .project-content img { width: 100%; border-radius: 5px; margin-bottom: 20px; border: 1px solid var(--border-color); }
+        .project-content h3 { color: var(--primary-color); font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        .project-links { text-align: center; margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-logo"><a href="../index.html" style="color: #fff;">ShreyasIO.dev</a></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects" class="active">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="mailto:shreyaskadlag2019@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <h1>Smart Environmental Chamber</h1>
+        <p>A microcontroller-based chamber for precise environmental control and monitoring.</p>
+    </header>
+
+    <div class="container project-content">
+        
+        <img src="https" alt="Smart Environmental Chamber prototype with LVGL display">
+
+        <h3>The Problem</h3>
+        <p>Many research and industrial processes require a stable environment where parameters like temperature and humidity are precisely controlled. Manual monitoring is inefficient, and commercial chambers can be expensive and inflexible.</p>
+
+        <h3>My Solution</h3>
+        <p>I designed and developed a 'Smart Environmental Chamber' using either a <strong>PIC16F877A or an ESP32</strong>. The system actively monitors and controls temperature and humidity. A key feature is the real-time data display on a <strong>TFT screen using the LVGL (Light and Versatile Graphics Library)</strong>, providing a modern and responsive user interface.</p>
+        
+        <h3>How It Works: The Technical Details</h3>
+        <p>This was a complete system design, from hardware to firmware and UI.</p>
+        <ul>
+            <li><strong>Control Unit:</strong> The system uses a powerful microcontroller (PIC16F877A / ESP32) for all data acquisition (from sensors like DHT22) and control logic (for heaters/coolers/humidifiers).</li>
+            <li><strong>User Interface (UI):</strong> I used the <strong>LVGL framework</strong> to create a graphical interface on a TFT display. This allows the user to set target parameters and view real-time data logs and graphs directly on the device.</li>
+            <li><strong>Hardware Design:</strong> I designed a custom <strong>PCB in EasyEDA</strong> to house the microcontroller, display connectors, sensor ports, and relay drivers, ensuring a stable and professional-grade product.</li>
+            <li><strong>Data Logging:</strong> The system supports data logging and analysis via a UART/USB interface, allowing data to be exported to a PC for research purposes.</li>
+        </ul>
+
+        <h3>Tech Stack Used</h3>
+        <ul>
+            <li><strong>Platform:</strong> PIC16F877A / ESP32</li>
+            <li><strong>Display:</strong> TFT Display with LVGL</li>
+            <li><strong>Hardware Design:</strong> Custom PCB designed in EasyEDA</li>
+            <li><strong>Protocols:</strong> UART, I2C (for sensors)</li>
+            <li><strong>Software:</strong> C, C++</li>
+        </ul>
+
+        <div class="project-links">
+            <a href="../index.html#projects" class="cta-button secondary">Back to Projects</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shreyas Kadlag. Built from scratch.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Car Black Box System</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .project-header {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 1)), url('https://picsum.photos/seed/car-bg/1200/400');
+            background-size: cover;
+            background-position: center;
+        }
+        .project-header h1 { font-size: 3rem; }
+        .project-content { max-width: 900px; margin: 40px auto; }
+        .project-content img { width: 100%; border-radius: 5px; margin-bottom: 20px; border: 1px solid var(--border-color); }
+        .project-content h3 { color: var(--primary-color); font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        .project-links { text-align: center; margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-logo"><a href="../index.html" style="color: #fff;">ShreyasIO.dev</a></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects" class="active">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="mailto:shreyaskadlag2019@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <h1>Car Black Box System</h1>
+        <p>A PIC-based system for real-time event logging and post-event analysis.</p>
+    </header>
+
+    <div class="container project-content">
+        
+        <img src="https" alt="Car Black Box prototype with CLCD display">
+
+        <h3>The Problem</h3>
+        <p>In case of a vehicle incident, it's critical to have a reliable record of what was happening right before and during the event. A 'Black Box' needs to capture key data and store it securely in a way that survives the event and can be retrieved later for analysis.</p>
+
+        <h3>My Solution</h3>
+        <p>I developed a real-time Car Black Box using the <strong>PIC16F877A</strong> microcontroller. This system is designed to continuously record event IDs, timestamps, and user inputs (like button presses or sensor triggers). The data is displayed live on a <strong>CLCD</strong> (Character LCD).</p>
+        
+        <h3>How It Works: The Technical Details</h3>
+        <p>The core of the system is data integrity and secure storage.</p>
+        <ul>
+            <li><strong>Persistent Storage:</strong> To ensure data is never lost (even on power failure), all logs are stored permanently in an <strong>external EEPROM</strong> module.</li>
+            <li><strong>Data Communication:</strong> The PIC microcontroller communicates with the EEPROM using the <strong>I2C protocol</strong>, which is a robust, two-wire interface ideal for this application.</li>
+            <li><strong>Data Retrieval:</strong> For post-event analysis, all stored data can be retrieved from the device by connecting it to a PC using <strong>UART communication</strong>. This allows for easy downloading and analysis of incident logs.</li>
+        </ul>
+
+        <h3>Tech Stack Used</h3>
+        <ul>
+            <li><strong>Platform:</strong> PIC16F877A</li>
+            <li><strong>Display:</strong> CLCD (Character LCD)</li>
+            <li><strong>Storage:</strong> External EEPROM</li>
+            <li><strong>Protocols:</strong> I2C, UART</li>
+            <li><strong>Software:</strong> C (MPLAB)</li>
+        </ul>
+
+        <div class="project-links">
+            <a href="https://github.com/Skadlah/Car-Black-Box-System" class="cta-button" target="_blank">View on GitHub</a>
+            <a href="../index.html#projects" class="cta-button secondary">Back to Projects</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shreyas Kadlag. Built from scratch.</p>
+    </footer>
+</body>
+</html>

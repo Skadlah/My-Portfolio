@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: AI-Based Smart Wheelchair</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .project-header {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 1)), url('https://picsum.photos/seed/wheelchair-bg/1200/400');
+            background-size: cover;
+            background-position: center;
+        }
+        .project-header h1 { font-size: 3rem; }
+        .project-content { max-width: 900px; margin: 40px auto; }
+        
+        .project-content img.main-diagram { 
+            width: 100%; 
+            border-radius: 5px; 
+            margin-bottom: 20px; 
+            border: 1px solid var(--border-color);
+            background: #fff;
+        }
+        .project-content h3 { 
+            color: var(--primary-color); 
+            font-size: 1.8rem; 
+            border-bottom: 1px solid var(--border-color); 
+            padding-bottom: 10px; 
+            margin-top: 40px; 
+        }
+        .publication-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .publication-section img {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+        }
+        .full-width-img {
+            grid-column: 1 / -1;
+        }
+        .project-links { text-align: center; margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-logo"><a href="../index.html" style="color: #fff;">ShreyasIO.dev</a></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects" class="active">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="mailto:shreyaskadlag2019@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <h1>AI-Based Smart Wheelchair</h1>
+        <p>Dual-mode control using Voice and Hand Gestures. (Published in IJMTST Journal)</p>
+    </header>
+
+    <div class="container project-content">
+
+        <h3>System Architecture</h3>
+        <p>This project was developed as my final year academic project and was successfully **published in the International Journal for Modern Trends in Science and Technology (IJMTST)**. Below is the official system diagram from the paper.</p>
+
+        <img src="../image/Wheelchair-System-Diagram.jpg" alt="Official System Diagram from Research Paper" class="main-diagram">
+
+        <h3>The Problem</h3>
+        <p>Individuals with severe mobility impairments often depend on others for movement. While traditional joystick-controlled wheelchairs exist, they are not usable for everyone. The goal was to create an intuitive, hands-free control system to enhance user independence and accessibility.</p>
+
+        <h3>My Solution</h3>
+        <p>I designed and developed a smart wheelchair prototype controlled by two distinct, non-invasive modes: real-time hand gestures and secure voice commands. This dual-mode system, built on a Raspberry Pi 3B+, provides flexibility and safety, allowing the user to select the control method that works best for them via a physical toggle switch.</p>
+        
+        <h3>Publication & Diagrams</h3>
+        <p>The project was published in **IJMTST, Volume 9, Issue 04, April 2023**. Below are the official publication certificate and the system logic flowchart.</p>
+        
+        <div class="publication-section">
+            <div>
+                <h4>System Flowchart (Figure 2)</h4>
+                <img src="../image/Wheelchair-Flowchart.jpg" alt="System Logic Flowchart from Paper">
+            </div>
+            <div>
+                <h4>Publication Certificate</h4>
+                <img src="../image/Wheelchair-Certificate.jpg" alt="IJMTST Publication Certificate">
+            </div>
+        </div>
+
+        <h3>How It Works: The Technical Details</h3>
+        <p>The entire system is powered by a <strong>Raspberry Pi 3B+</strong> running a Linux OS, which serves as the central processing unit.</p>
+        <ul>
+            <li><strong>Gesture Control Mode:</strong> A standard webcam feeds a live video stream to the Pi. I implemented a Python-based real-time gesture recognition algorithm using **OpenCV**. This script processes the video feed, identifies specific hand gestures (e.g., "Up 5 finger" for forward, "Close all fingers" for stop), and translates them into movement commands.</li>
+            <li><strong>Voice Control Mode:</strong> A microphone captures user speech. The Pi uses Python libraries like **pyttsx3** and speech recognition to parse commands (e.g., "Is voice F" for forward, "Is voice S" for stop).</li>
+            <li><strong>Hardware Integration:</strong> The Pi communicates with a **4-channel Relay Module**, which acts as a switch to control the 12V DC gear motors that drive the wheels.</li>
+        </ul>
+
+        <h3>Tech Stack Used</h3>
+        <ul>
+            <li><strong>Platform:</strong> Raspberry Pi 3B+</li>
+            <li><strong>Operating System:</strong> Linux (Raspbian)</li>
+            <li><strong>Core Language:</strong> Python</li>
+            <li><strong>Libraries:</strong> OpenCV (Computer Vision), pyttsx3 (Text-to-Speech)</li>
+            <li><strong>Hardware:</strong> Webcam, Microphone, 4-Channel Relay, 12V DC Motors</li>
+        </ul>
+
+        <div class="project-links">
+            <a href="https://github.com/Skadlah/AI-Based-Smart-Wheel-Chair" class="cta-button" target="_blank">View on GitHub</a>
+            <a href="../index.html#projects" class="cta-button secondary">Back to Projects</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shreyas Kadlag. Built from scratch.</p>
+    </footer>
+</body>
+</html>

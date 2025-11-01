@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Smart Data Logger System</title>
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .project-header {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 1)), url('https://picsum.photos/seed/datalogger-bg/1200/400');
+            background-size: cover;
+            background-position: center;
+        }
+        .project-header h1 { font-size: 3rem; }
+        .project-content { max-width: 900px; margin: 40px auto; }
+        .project-content img { width: 100%; border-radius: 5px; margin-bottom: 20px; border: 1px solid var(--border-color); }
+        .project-content h3 { color: var(--primary-color); font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        .project-links { text-align: center; margin: 40px 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-logo"><a href="../index.html" style="color: #fff;">ShreyasIO.dev</a></div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#projects" class="active">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="mailto:shreyaskadlag2019@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <h1>Smart Data Logger System with GPS</h1>
+        <p>An ESP32-based system for robust environmental and positional data logging.</p>
+    </header>
+
+    <div class="container project-content">
+        
+        <img src="https" alt="Placeholder for PCB layout or prototype">
+
+        <h3>The Problem</h3>
+        <p>For many research, industrial, or IoT applications, there's a need to continuously record environmental data (like temperature, humidity) along with precise location and time. This data needs to be stored reliably, with redundancy, and be easily portable for analysis.</p>
+
+        <h3>My Solution</h3>
+        <p>I designed and implemented a microcontroller-based data logging system using the <strong>ESP32</strong>. It integrates a <strong>GPS module</strong> for real-time location tracking and timestamps. To ensure data integrity and portability, the system features a redundant storage solution, saving all data simultaneously to both an <strong>SD card</strong> and a <strong>USB pen drive</strong>.</p>
+        
+        <h3>How It Works: The Technical Details</h3>
+        <p>The system is built around the ESP32, which excels at data acquisition and communication.</p>
+        <ul>
+            <li><strong>Data Acquisition:</strong> The ESP32 efficiently gathers data from various sensors (environmental) and the GPS module (positional).</li>
+            <li><strong>Custom Hardware:</strong> I designed a custom <strong>PCB using EasyEDA</strong> to ensure a reliable and clean interface between the ESP32, sensors, GPS module, SD card slot, and USB port. This optimizes the layout and hardware performance.</li>
+            <li><strong>Redundant Storage:</strong> The system is programmed to write every data point to two separate storage media. This redundancy is critical for applications where data loss is not an option.</li>
+            <li><strong>Communication:</strong> I optimized the <strong>UART/SPI protocols</strong> to handle high-speed data transfer between the microcontroller, sensors, and storage modules, ensuring robust and efficient logging.</li>
+        </ul>
+
+        <h3>Tech Stack Used</h3>
+        <ul>
+            <li><strong>Platform:</strong> ESP32</li>
+            <li><strong>Sensors:</strong> GPS Module (and other environmental sensors)</li>
+            <li><strong>Storage:</strong> SD Card, USB Pen Drive</li>
+            <li><strong>Hardware Design:</strong> Custom PCB designed in EasyEDA</li>
+            <li><strong>Protocols:</strong> UART, SPI</li>
+        </ul>
+
+        <div class="project-links">
+            <a href="../index.html#projects" class="cta-button secondary">Back to Projects</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shreyas Kadlag. Built from scratch.</p>
+    </footer>
+</body>
+</html>
