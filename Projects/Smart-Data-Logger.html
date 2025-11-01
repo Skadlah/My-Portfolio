@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project: AI-Based Smart Wheelchair</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Project: Smart Data Logger System</title>
+    <link rel="stylesheet" href="style.css">
     
     <style>
         .project-header {
             padding: 100px 0 60px;
             text-align: center;
-            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 1)), url('https://picsum.photos/seed/wheelchair-bg/1200/400');
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 1)), url('https://picsum.photos/seed/datalogger-bg/1200/400');
             background-size: cover;
             background-position: center;
         }
@@ -24,51 +24,51 @@
 <body>
     <nav>
         <div class="container">
-            <div class="nav-logo"><a href="../index.html" style="color: #fff;">ShreyasIO.dev</a></div>
+            <div class="nav-logo"><a href="index.html" style="color: #fff;">ShreyasIO.dev</a></div>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#projects" class="active">Projects</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects" class="active">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
                 <li><a href="mailto:shreyaskadlag2019@gmail.com">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="project-header">
-        <h1>AI-Based Smart Wheelchair</h1>
-        <p>Dual-mode control using Voice and Hand Gestures.</p>
+        <h1>Smart Data Logger System with GPS</h1>
+        <p>An ESP32-based system for robust environmental and positional data logging.</p>
     </header>
 
     <div class="container project-content">
         
-        <img src="https://picsum.photos/seed/diagram/900/400" alt="Placeholder for circuit diagram or prototype">
+        <img src="https" alt="Placeholder for PCB layout or prototype">
 
         <h3>The Problem</h3>
-        <p>Individuals with severe mobility impairments often depend on others for movement. While traditional joystick-controlled wheelchairs exist, they are not usable for everyone. The goal was to create an intuitive, hands-free control system to enhance user independence and accessibility.</p>
+        <p>For many research, industrial, or IoT applications, there's a need to continuously record environmental data (like temperature, humidity) along with precise location and time. This data needs to be stored reliably, with redundancy, and be easily portable for analysis.</p>
 
         <h3>My Solution</h3>
-        <p>I designed and developed a smart wheelchair prototype controlled by two distinct, non-invasive modes: real-time hand gestures and secure voice commands. This dual-mode system, built on a Raspberry Pi 3B+, provides flexibility and safety, allowing the user to select the control method that works best for them via a physical toggle switch.</p>
+        <p>I designed and implemented a microcontroller-based data logging system using the <strong>ESP32</strong>. It integrates a <strong>GPS module</strong> for real-time location tracking and timestamps. To ensure data integrity and portability, the system features a redundant storage solution, saving all data simultaneously to both an <strong>SD card</strong> and a <strong>USB pen drive</strong>.</p>
         
         <h3>How It Works: The Technical Details</h3>
-        <p>The entire system is powered by a <strong>Raspberry Pi 3B+</strong> running a Linux OS, which serves as the central processing unit.</p>
+        <p>The system is built around the ESP32, which excels at data acquisition and communication.</p>
         <ul>
-            <li><strong>Gesture Control Mode:</strong> A standard webcam feeds a live video stream to the Pi. I implemented a Python-based real-time gesture recognition algorithm. This script processes the video feed, identifies specific hand gestures (e.g., "open palm" for stop, "point" for forward), and translates them into corresponding movement commands for the wheelchair's motor driver.</li>
-            <li><strong>Voice Control Mode:</strong> A microphone captures user speech. The Pi uses voice processing libraries to parse these commands (e.g., "Go," "Stop," "Turn Left"). To ensure security and prevent accidental activation, the system is trained to respond only to specific, clear commands.</li>
-            <li><strong>Hardware Integration:</strong> The Pi communicates with a motor driver (like an L298N or similar) which, in turn, controls the wheelchair's DC motors. A physical toggle switch is monitored by the Pi's GPIO pins, allowing the user to instantly switch between 'Gesture' and 'Voice' modes, ensuring safety and reliability.</li>
+            <li><strong>Data Acquisition:</strong> The ESP32 efficiently gathers data from various sensors (environmental) and the GPS module (positional).</li>
+            <li><strong>Custom Hardware:</strong> I designed a custom <strong>PCB using EasyEDA</strong> to ensure a reliable and clean interface between the ESP32, sensors, GPS module, SD card slot, and USB port. This optimizes the layout and hardware performance.</li>
+            <li><strong>Redundant Storage:</strong> The system is programmed to write every data point to two separate storage media. This redundancy is critical for applications where data loss is not an option.</li>
+            <li><strong>Communication:</strong> I optimized the <strong>UART/SPI protocols</strong> to handle high-speed data transfer between the microcontroller, sensors, and storage modules, ensuring robust and efficient logging.</li>
         </ul>
 
         <h3>Tech Stack Used</h3>
         <ul>
-            <li><strong>Platform:</strong> Raspberry Pi 3B+</li>
-            <li><strong>Operating System:</strong> Linux (Raspbian)</li>
-            <li><strong>Core Language:</strong> Python</li>
-            <li><strong>Inputs:</strong> Webcam (for gestures), Microphone (for voice)</li>
-            <li><strong>Safety:</strong> Physical Toggle Switch for mode selection</li>
+            <li><strong>Platform:</strong> ESP32</li>
+            <li><strong>Sensors:</strong> GPS Module (and other environmental sensors)</li>
+            <li><strong>Storage:</strong> SD Card, USB Pen Drive</li>
+            <li><strong>Hardware Design:</strong> Custom PCB designed in EasyEDA</li>
+            <li><strong>Protocols:</strong> UART, SPI</li>
         </ul>
 
         <div class="project-links">
-            <a href="https://github.com/Skadlah/AI-Based-Smart-Wheel-Chair" class="cta-button" target="_blank">View on GitHub</a>
-            <a href="../index.html#projects" class="cta-button secondary">Back to Projects</a>
+            <a href="index.html#projects" class="cta-button secondary">Back to Projects</a>
         </div>
     </div>
 

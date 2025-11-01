@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project: Fan Failure Module</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     
     <style>
         .project-header {
@@ -24,11 +24,11 @@
 <body>
     <nav>
         <div class="container">
-            <div class="nav-logo"><a href="../index.html" style="color: #fff;">ShreyasIO.dev</a></div>
+            <div class="nav-logo"><a href="index.html" style="color: #fff;">ShreyasIO.dev</a></div>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#projects" class="active">Projects</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects" class="active">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
                 <li><a href="mailto:shreyaskadlag2019@gmail.com">Contact</a></li>
             </ul>
         </div>
@@ -41,19 +41,19 @@
 
     <div class="container project-content">
         
-        <img src="https://picsum.photos/seed/relay/900/400" alt="Fan Failure Module prototype with relay">
+        <img src="https" alt="Fan Failure Module prototype with relay">
 
         <h3>The Problem</h3>
         <p>In industrial control panels, cooling fans are critical for maintaining safe operating temperatures. If a primary fan fails, the internal temperature can rise rapidly, leading to component damage and costly downtime. A system is needed to detect this failure and automatically switch to a backup fan.</p>
 
         <h3>My Solution</h3>
-        <p>I developed a 'Fan Failure Module' using a **PIC16F877A** microcontroller. The system monitors panel temperature and manages fan operations. Its primary function is to ensure uninterrupted cooling by automatically switching to a **backup fan** in case the primary fan fails, and then attempting an automatic recovery.</p>
+        <p>I developed a 'Fan Failure Module' using a <strong>PIC16F877A</strong> microcontroller. The system monitors panel temperature and manages fan operations. Its primary function is to ensure uninterrupted cooling by automatically switching to a <strong>backup fan</strong> in case the primary fan fails, and then attempting an automatic recovery.</p>
         
         <h3>How It Works: The Technical Details</h3>
         <p>The logic is built around reliability and automatic recovery.</p>
         <ul>
             <li><strong>Temperature Monitoring:</strong> The PIC microcontroller continuously monitors the panel's temperature based on set thresholds.</li>
-            <li><strong>Automatic Switching:</strong> A **Relay Module** is used for the physical switching. If the primary fan fails (which could be detected by a sensor or a rise in temperature despite the fan being 'on'), the PIC energizes the relay to switch the power to the backup fan.</li>
+            <li><strong>Automatic Switching:</strong> A <strong>Relay Module</strong> is used for the physical switching. If the primary fan fails (which could be detected by a sensor or a rise in temperature despite the fan being 'on'), the PIC energizes the relay to switch the power to the backup fan.</li>
             <li><strong>Automatic Recovery:</strong> The system is designed to manage the fans to ensure the panel remains cool, potentially logging the failure and alerting a user, while automatically recovering the cooling function.</li>
         </ul>
 
@@ -67,7 +67,7 @@
 
         <div class="project-links">
             <a href="https://github.com/Skadlah/Fan-Failure-Module" class="cta-button" target="_blank">View on GitHub</a>
-            <a href="../index.html#projects" class="cta-button secondary">Back to Projects</a>
+            <a href="index.html#projects" class="cta-button secondary">Back to Projects</a>
         </div>
     </div>
 
